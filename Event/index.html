@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <button class="btn">Click 1</button>
+      <button class="btn">Click 2</button>
+      <button class="btn">Click 3</button>
+    </div>
+
+    <script>
+      const container = document.getElementById("container");
+      const btns = document.querySelectorAll(".btn");
+
+      // Array.from(btns).forEach((btn) => {
+      //   btn.addEventListener("click", (e) => {
+      //     console.log(e.target);
+      //   });
+      // });
+
+      container.addEventListener("click", (e) => {
+        if (e.target.nodeName === "BUTTON") {
+          console.log(e.target);
+        }
+      });
+    </script>
+  </body>
+</html>
